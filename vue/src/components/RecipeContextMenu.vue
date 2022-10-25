@@ -10,6 +10,9 @@
                 <a class="dropdown-item" :href="resolveDjangoUrl('edit_recipe', recipe.id)" v-if="!disabled_options.edit"><i
                     class="fas fa-pencil-alt fa-fw"></i> {{ $t("Edit") }}</a>
 
+                <a class="dropdown-item" :href="resolveDjangoUrl('delete_recipe', recipe.id)"><i
+                    class="fas fa-trash fa-fw"></i> {{ $t("Delete") }}</a>
+
                 <a class="dropdown-item" :href="resolveDjangoUrl('edit_convert_recipe', recipe.id)"
                    v-if="!recipe.internal && !disabled_options.convert"><i class="fas fa-exchange-alt fa-fw"></i> {{ $t("convert_internal") }}</a>
 
